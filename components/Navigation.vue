@@ -1,20 +1,31 @@
 <template>
   <div>
+    <app-menu :opened="opened"></app-menu>
     <nav>
       <logo></logo>
-      <burger></burger>
+      <button @click="toggleMenu">MENU</button>
     </nav>
   </div>
 </template>
 
 <script>
 import Logo from '~components/Logo.vue'
-import Burger from '~components/Burger.vue'
+import Menu from '~components/Menu.vue'
 
 export default {
   components: {
     Logo,
-    Burger
+    appMenu: Menu
+  },
+  data () {
+    return {
+      opened: false
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.opened = !this.opened
+    }
   }
 }
 </script>
@@ -23,25 +34,23 @@ export default {
 @import '~assets/stylesheets/colors.scss';
 
 nav {
-    display: block;
-    clear: both;
-    width: 100%;
-    color: $dark-blue;
+  display: block;
+  clear: both;
+  width: 100%;
+  color: $dark-blue;
 }
 
 nav a {
-    text-decoration: none;
-    color: $dark-blue;
+  text-decoration: none;
+  color: $dark-blue;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: $red;
+  text-decoration: underline;
+  color: $red;
 }
 
 nav .logo-wrapper {
-    vertical-align: top;
+  vertical-align: top;
 }
-
-
 </style>
