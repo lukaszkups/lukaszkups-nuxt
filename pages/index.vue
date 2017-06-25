@@ -1,31 +1,22 @@
 <template>
-  <section class="container">
-    <div>
-      <navigation></navigation>
-
-    </div>
-  </section>
+  <div>
+    <section class="container">
+      <h1 class="title">A web crafter.</h1>
+    </section>
+  </div>
 </template>
 
-<script>
-import Navigation from '~components/Navigation.vue'
+<style lang="scss" scoped>
+@import '~assets/stylesheets/variables.scss';
 
-export default {
-  components: {
-    Navigation
-  }
-}
-</script>
-
-<style lang="scss">
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* 1 */
+  font-family: 'Passion One', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-size: $font-size-100;
+  color: $dark-blue;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 30vh;
 }
 
 .subtitle {

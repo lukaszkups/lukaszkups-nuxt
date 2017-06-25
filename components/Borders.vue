@@ -8,13 +8,13 @@
 </template>
 
 <style lang="scss">
-  $border-size: 15px;
+@import '~assets/stylesheets/variables.scss';
 
   .top-border, .left-border, .right-border, .bottom-border {
     position: fixed;
     display: block;
     z-index: 3;
-    background-color: #eee;
+    background-color: $border-color;
   }
 
   .top-border {

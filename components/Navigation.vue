@@ -1,21 +1,20 @@
 <template>
   <div>
-    <app-menu :opened="opened"></app-menu>
-    <nav>
-      <logo></logo>
-      <button @click="toggleMenu">MENU</button>
-    </nav>
+    <div class="main-container">
+      <nav>
+        <logo></logo>
+        <a class="menu-button" @click="$store.commit('toggleMenu')">MENU</a>
+      </nav>
+    </div>
   </div>
 </template>
 
 <script>
 import Logo from '~components/Logo.vue'
-import Menu from '~components/Menu.vue'
 
 export default {
   components: {
-    Logo,
-    appMenu: Menu
+    Logo
   },
   data () {
     return {
@@ -30,8 +29,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '~assets/stylesheets/colors.scss';
+<style lang="scss" scoped>
+@import '~assets/stylesheets/variables.scss';
 
 nav {
   display: block;
@@ -40,17 +39,25 @@ nav {
   color: $dark-blue;
 }
 
-nav a {
-  text-decoration: none;
-  color: $dark-blue;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: $red;
-}
-
 nav .logo-wrapper {
   vertical-align: top;
 }
+
+nav .menu-button {
+  float: right;
+  font-family: 'Abel', sans-serif;
+  border: none;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+  font-size: $font-size-1;
+  cursor: pointer;
+  color: $dark-blue;
+}
+
+nav .menu-button:hover {
+  text-decoration: none;
+  color: $red;  
+}
+
 </style>

@@ -5,88 +5,7 @@
 </template>
 
 <style lang="scss">
-@import '~assets/stylesheets/colors.scss';
-
-$logo-base-size: 10px;
-$animation-time: 2s;
-
-@keyframes fade-in {
-  0% {
-    -webkit-transform: skew(0deg, 0deg);
-    -moz-transform: skew(0deg, 0deg);
-    -o-transform: skew(0deg, 0deg);
-    transform: skew(0deg, 0deg);
-    margin-left: $logo-base-size * 1.8;
-  }
-  10% {
-    -webkit-transform: skew(0deg, 0deg);
-    -moz-transform: skew(0deg, 0deg);
-    -o-transform: skew(0deg, 0deg);
-    transform: skew(0deg, 0deg);
-    margin-left: $logo-base-size * 1.8;
-  }
-  100% {
-    -webkit-transform: skew(25deg, 0deg);
-    -moz-transform: skew(25deg, 0deg);
-    -o-transform: skew(25deg, 0deg);
-    transform: skew(25deg, 0deg);
-    margin-left: $logo-base-size * 1.5;
-  }
-}
-
-@keyframes fade-in-before {
-  0% {
-    -webkit-transform: skew(0deg, 0deg);
-    -moz-transform: skew(0deg, 0deg);
-    -o-transform: skew(0deg, 0deg);
-    transform: skew(0deg, 0deg);
-    margin-left: 0;
-    margin-right: 0;
-  }
-  10% {
-    -webkit-transform: skew(0deg, 0deg);
-    -moz-transform: skew(0deg, 0deg);
-    -o-transform: skew(0deg, 0deg);
-    transform: skew(0deg, 0deg);
-    margin-left: 0;
-    margin-right: 0;
-  }
-  100% {
-    -webkit-transform: skew(-50deg, 0deg);
-    -moz-transform: skew(-50deg, 0deg);
-    -o-transform: skew(-50deg, 0deg);
-    transform: skew(-50deg, 0deg);
-    margin-left: $logo-base-size * 1.73;
-    margin-right: 0 - ($logo-base-size * 1.8);
-  }
-}
-
-@keyframes fade-in-after {
-  0% {
-    -webkit-transform: skew(0deg, 0deg);
-    -moz-transform: skew(0deg, 0deg);
-    -o-transform: skew(0deg, 0deg);
-    transform: skew(0deg, 0deg);
-    margin-left: 0;
-    margin-right: 0;
-  }
-  10% {
-    -webkit-transform: skew(0deg, 0deg);
-    -moz-transform: skew(0deg, 0deg);
-    -o-transform: skew(0deg, 0deg);
-    transform: skew(0deg, 0deg);
-    margin-left: 0;
-    margin-right: 0;
-  }
-  100% {
-    -webkit-transform: skew(-50deg, 0deg);
-    -moz-transform: skew(-50deg, 0deg);
-    -o-transform: skew(-50deg, 0deg);
-    transform: skew(-50deg, 0deg);
-    margin-left: 0 - ($logo-base-size * 0.59);
-    margin-right: 0 - ($logo-base-size * 0.73);
-  }
-}
+@import '~assets/stylesheets/variables.scss';
 
 @mixin logo-size($size) {
   width: $size * 1.1428;
@@ -132,7 +51,7 @@ $animation-time: 2s;
   clear: both;
   position: relative;
   @include logo-size($logo-base-size);
-  animation: $animation-time fade-in;
+  margin-left: $logo-base-size * 1.5;
 }
 
 .logo:before,
@@ -149,11 +68,9 @@ $animation-time: 2s;
 
 .logo:before {
   @include logo-size-before($logo-base-size);
-  animation: $animation-time fade-in-before;
 }
 
 .logo:after {
   @include logo-size-after($logo-base-size);
-  animation: $animation-time fade-in-after;
 }
 </style>
