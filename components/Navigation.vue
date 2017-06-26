@@ -45,7 +45,7 @@ nav .logo-wrapper {
 
 nav .menu-button {
   float: right;
-  font-family: 'Abel', sans-serif;
+  font-family: $abel-font-family;
   border: none;
   background: transparent;
   outline: none;

@@ -2,7 +2,7 @@
   <div>
     <div class="menu">
       <div class="menu-container">
-        <div class="col">
+        <div class="col menu-col">
           <nav>
             <ul>
               <li v-for="(button, index) in menuButtons" :key="index" @mouseover="updateDescription(index)" @mouseleave="resetDescription">
@@ -82,7 +82,7 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  font-family: 'Abel';
+  font-family: $monospace-font-family;
   letter-spacing: 0.8px;
 }
 
@@ -96,6 +96,10 @@ export default {
 
 .menu .col {
   flex: 1;
+}
+
+.menu-col {
+  flex-shrink: 0;
 }
 
 nav ul {
@@ -118,6 +122,7 @@ nav a {
   width: 100%;
   font-size: $font-size-2;
   cursor: pointer; 
+  outline: none;
 }
 
 nav a:hover, nav a.nuxt-link-active {

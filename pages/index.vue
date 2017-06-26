@@ -10,11 +10,11 @@
 @import '~assets/stylesheets/variables.scss';
 
 .title {
-  font-family: 'Passion One', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-family: $passion-font-family;
   display: block;
   font-size: $font-size-100;
   color: $dark-blue;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 30vh;
 }
