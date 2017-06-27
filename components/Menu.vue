@@ -17,7 +17,7 @@
         </div>
         <div class="col status-col">
             <h2>{{ currentStatus }}</h2>
-            <p v-html="statusDescription"></p>
+            <p>Front-end developer <a class="red" href="http://influenster.com">@Influenster</a>. Web crafter. Making things around the web since 2009.</p>
         </div>        
       </div>
     </div>
@@ -36,8 +36,7 @@ export default {
       ],
       menuHoverTitle: '',
       menuHoverDescription: '',
-      currentStatus: 'Current status',
-      statusDescription: 'Front-end developer <span style="color: $red">@Influenster</span>. Web crafter. Making things around the web since 2009.'
+      currentStatus: 'Current status'
     }
   },
   methods: {
@@ -131,7 +130,7 @@ nav a:hover, nav a.nuxt-link-active {
 }
 
 .active-col h2 , .status-col h2 {
-  font-size: $font-size-3;
+  font-size: $font-size-2;
   margin-top: 80px;
   margin-bottom: 10px;
   color: $red;
@@ -144,10 +143,19 @@ nav a:hover, nav a.nuxt-link-active {
   font-size: $font-size-2;
 }
 
-.status-col p {
+.status-col p, .active-col p{
   font-size: $font-size-1;
   line-height: 1.25em;
   letter-spacing: 0.3px;
+}
+
+a.red {
+  color: $red;
+  text-decoration: none;
+}
+
+a.red:hover {
+  text-decoration: underline;
 }
 
 </style>
