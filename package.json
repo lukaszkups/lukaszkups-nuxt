@@ -5,7 +5,7 @@
   "author": "lukaszkups <lukaszkups@gmail.com>",
   "private": true,
   "dependencies": {
-    "directory-to-object": "^1.1.1",
+    "marked": "^0.3.6",
     "nuxt": "latest"
   },
   "scripts": {

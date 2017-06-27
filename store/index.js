@@ -1,24 +1,23 @@
 import Vuex from 'vuex'
-import axios from 'axios'
 
 const store = () => new Vuex.Store({
   state: {
     showMenu: false,
-    posts: []
+    years: [],
+    postList: {}
   },
   mutations: {
     toggleMenu (state) {
       state.showMenu = !state.showMenu
-    }
-  },
-  actions: {
-    fetch ({ store, params }) {
-      return axios.get('http://api.github.com/repos/lukaszkups/lukaszkups-nuxt/static/notes').then((res) => {
-        console.log(res)
-        store.commit('posts', res.data)
-      }).catch((err) => {
-        console.warn(err)
+    },
+    setYears (state, data) {
+      state.years = data
+      data.map(obj => {
+        state.postList[obj] = []
       })
+    },
+    pushPost (state, data) {
+      state.postList[data.year].push(data)
     }
   }
 })

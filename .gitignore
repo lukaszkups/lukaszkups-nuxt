@@ -12,3 +12,6 @@ dist
 
 # Visual Studio Code
 .vscode
+
+# Secret :)
+static/secrets/secret.json
