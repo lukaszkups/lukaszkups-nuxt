@@ -31,5 +31,7 @@ footer {
   font-size: $font-size-1;
   letter-spacing: 0.8px;
   color: $dark-blue;
+  position: relative;
+  z-index: 2;
 }
 </style>
