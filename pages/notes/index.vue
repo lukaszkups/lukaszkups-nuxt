@@ -10,6 +10,7 @@
         </li>-->
       </ul>
     </div>
+    {{postList}}
   </div>
 </template>
 
@@ -41,16 +42,17 @@ export default {
     // fetch all notes, grouped by years
     for (let year in years) {
       let {data} = await axios.get(`http://api.github.com/repos/lukaszkups/lukaszkups-nuxt/contents/static/notes/${years[year]}?access_token=${token.token}`)
-      data.forEach(async obj => {
+      data.forEach(obj => {
         // get each note content
-        const {data} = await axios.get(obj.download_url)
-        let entry = {
-          url: obj.download_url,
-          slug: obj.name,
-          year: years[year],
-          content: data || ''
-        }
-        store.commit('pushPost', entry)
+        axios.get(obj.download_url).then(resp => {
+          let entry = {
+            url: obj.download_url,
+            slug: obj.name,
+            year: years[year],
+            content: resp.data || ''
+          }
+          store.commit('pushPost', entry)
+        })
       })
     }
   }
