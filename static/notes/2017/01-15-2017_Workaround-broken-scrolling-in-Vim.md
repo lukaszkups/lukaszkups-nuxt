@@ -1,6 +1,6 @@
 ---
 title: Workaround broken scrolling in Vim
-date: 2017-01-15 21:09:07
+date: 15/01/2017
 tags: [programming, productivity, software]
 ---
 

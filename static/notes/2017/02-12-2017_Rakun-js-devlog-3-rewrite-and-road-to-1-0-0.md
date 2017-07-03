@@ -1,6 +1,6 @@
 ---
 title: 'Rakun.js devlog #3 - rewrite and road to 1.0.0'
-date: 2017-02-12 22:28:15
+date: 12/02/2017
 tags: [programming, rakunjs, javascript, devlog]
 ---
 

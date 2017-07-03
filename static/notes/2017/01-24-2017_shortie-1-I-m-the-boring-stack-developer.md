@@ -1,6 +1,6 @@
 ---
 title: 'Shortie #1: I''m the boring stack developer'
-date: 2017-01-24 22:16:41
+date: 24/01/2017
 tags: [programming, lifehacks, productivity, shortie, technology]
 ---
 

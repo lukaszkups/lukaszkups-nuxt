@@ -1,6 +1,6 @@
 ---
 title: 'Rakun.js devlog #2'
-date: 2016-12-28 11:22:54
+date: 28/12/2016
 tags: [rakunjs, devlog, programming, javascript]
 ---
 

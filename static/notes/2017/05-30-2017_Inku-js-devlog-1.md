@@ -1,6 +1,6 @@
 ---
 title: 'Inku.js devlog #1'
-date: 2017-05-30 18:31:49
+date: 30/05/2017
 tags: [inkujs, vuejs, programming, nodejs, javascript, devlog]
 ---
 

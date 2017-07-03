@@ -6,7 +6,7 @@ tags:
   - programming
   - javascript
   - frameworks
-date: 2016-12-28 00:00:00
+date: 28/12/2016
 ---
 
 Rakun.js is a un-opinionated, javascript plugin for wide usage.

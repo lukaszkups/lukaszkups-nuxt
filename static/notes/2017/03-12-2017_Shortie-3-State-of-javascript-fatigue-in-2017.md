@@ -1,6 +1,6 @@
 ---
 title: 'Shortie #3: State of javascript fatigue in 2017'
-date: 2017-03-12 18:48:32
+date: 12/03/2017
 tags: [javascript, programming, shortie]
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: Hello World 2.0
-category: notes,
-tags: [rakunjs, inkujs, web, blogging] 
+date: 27/12/2016
+tags:
+  - rakunjs
+  - inkujs
+  - web
+  - blogging
 ---
 
 Welcome to my new (temporary) blog! Finally I've managed to setup new version of it (old one is available at [github](https://github.com/lukaszkups/lukaszkups-old/tree/master/content/blog))
