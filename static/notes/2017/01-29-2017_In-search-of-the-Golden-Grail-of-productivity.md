@@ -3,7 +3,7 @@ title: In search of the Golden Grail of productivity
 tags:
   - lifehacks
   - productivity
-date: 29/01/2017
+date: 01/29/2017
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Hello World 2.0
-date: 27/12/2016
+date: 12/27/2016
 tags:
   - rakunjs
   - inkujs

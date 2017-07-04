@@ -1,6 +1,6 @@
 ---
 title: Is is Vue.js worth a shot?
-date: 12/05/2017
+date: 05/12/2017
 tags: [vuejs, programming, javascript, webdevelopment, programming, software]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Shortie #2: I''ve finally found a TODO app that rocks'
-date: 07/02/2017
+date: 02/07/2017
 tags: [reviews, productivity, software, lifehacks]
 ---
 

@@ -36,6 +36,6 @@ module.exports = {
         })
       }
     },
-    vendor: ['axios']
+    vendor: ['axios', 'marked', 'front-matter']
   }
 }

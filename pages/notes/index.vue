@@ -1,60 +1,57 @@
 <template>
   <div>
     <h1 class="title">notes.</h1>
-    <div v-for="(year, index) in postList" :key="index">
-      <h2 v-if="fetchedYear(year)">{{ year[0].year }}</h2>
-      <ul>
-        <!-- use method instead of computed property! -->
-        <!--<li v-for="(note, index) in year" :key="index">
-          <a :href="note.slug">{{ note.name }}</a>
-        </li>-->
-      </ul>
+    <div v-for="(year, index) in years" :key="index">
+      <h2>{{ year }}</h2>
+      <app-post-list :year="year"></app-post-list>
     </div>
-    {{postList}}
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import token from './../../static/secrets/secret.json'
+// import axios from 'axios'
+// import fm from 'front-matter'
+// import token from './../../static/secrets/secret.json'
+import PostList from '~components/PostList'
 
 export default {
   computed: {
     years () {
-      return this.$store.state.years
-    },
-    postList () {
-      return this.$store.state.postList
+      return this.$store.getters.years
     }
   },
-  methods: {
-    fetchedYear (year) {
-      return year && year[0] && year[0].hasOwnProperty('year')
-    }
+  components: {
+    appPostList: PostList
   },
-  async fetch ({ store, params }) {
-    // fetch years of blogging
-    const {data} = await axios.get(`http://api.github.com/repos/lukaszkups/lukaszkups-nuxt/contents/static/notes?access_token=${token.token}`)
-    const years = data.map(obj => {
-      return obj.name
-    })
-    store.commit('setYears', years)
-    // fetch all notes, grouped by years
-    for (let year in years) {
-      let {data} = await axios.get(`http://api.github.com/repos/lukaszkups/lukaszkups-nuxt/contents/static/notes/${years[year]}?access_token=${token.token}`)
-      data.forEach(obj => {
-        // get each note content
-        axios.get(obj.download_url).then(resp => {
-          let entry = {
-            url: obj.download_url,
-            slug: obj.name,
-            year: years[year],
-            content: resp.data || ''
-          }
-          store.commit('pushPost', entry)
-        })
-      })
-    }
+  asyncData (context) {
+    // // fetch years of blogging
+    // const {data} = await axios.get(`http://api.github.com/repos/lukaszkups/lukaszkups-nuxt/contents/static/notes?access_token=${token.token}`)
+    // let years = data.map(obj => {
+    //   return obj.name
+    // })
+    // years = years.reverse()
+    // context.store.commit('setYears', years)
+    // // fetch all notes, grouped by years
+    // for (let year in years) {
+    //   let {data} = await axios.get(`http://api.github.com/repos/lukaszkups/lukaszkups-nuxt/contents/static/notes/${years[year]}?access_token=${token.token}`)
+    //   Promise.all(data.map(async obj => {
+    //     // get each note content
+    //     const resp = await axios.get(obj.download_url)
+    //       // parse markdown
+    //     let str = fm(resp.data)
+    //     let entry = {
+    //       title: str.attributes.title,
+    //       date: str.attributes.date,
+    //       url: obj.download_url,
+    //       slug: obj.name,
+    //       year: years[year],
+    //       content: str.body || ''
+    //     }
+    //     console.warn(entry)
+    //     context.store.commit('pushPost', entry)
+    //     // })
+    //   }))
+    // }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 ---
 title: What trolling and motivation boost have in common?
-date: 27/03/2017
+date: 03/27/2017
 tags: [social-life, productivity, lifehacks, programming]
 ---
 

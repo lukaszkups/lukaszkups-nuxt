@@ -1,6 +1,6 @@
 ---
 title: Who is a web crafter anyway?
-date: 02/01/2017,
+date: 01/02/2017,
 tags: [webdevelopment, freelancing, software]
 ---
 

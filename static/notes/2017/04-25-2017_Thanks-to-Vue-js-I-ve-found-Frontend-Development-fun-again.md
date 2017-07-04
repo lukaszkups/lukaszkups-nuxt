@@ -1,6 +1,6 @@
 ---
 title: Thanks to Vue.js I've found Frontend Development fun again
-date: 25/04/2017
+date: 04/25/2017
 tags: [programming, javascript, vuejs, webdevelopment, frameworks]
 ---
 
