@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="(note, index) in postList" :key="index">
-        <a :href="note.slug"><span class="red-bg">{{ humanizeDate(note.date) }}</span> {{ note.title }}</a>
+        <a :href="note.slug" :contentLink="note.url"><span class="red-bg">{{ humanizeDate(note.date) }}</span> {{ note.title }}</a>
       </li>
     </ul>
   </div>
@@ -15,7 +15,7 @@ export default {
   props: ['year'],
   computed: {
     postList () {
-      return this.$store.state.postList[this.year].reverse()
+      return this.$store.state.postList[this.year]
     }
   },
   methods: {
