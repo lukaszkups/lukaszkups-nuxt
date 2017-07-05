@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     humanizeDate (date) {
-      return moment(date).format('D/MM/YYYY')
+      return moment(date).format('DD/MM/YYYY')
     }
   }
 }
