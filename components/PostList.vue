@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="(note, index) in postList" :key="index">
-        <a :href="note.slug" :contentLink="note.url"><span class="red-bg">{{ humanizeDate(note.date) }}</span> {{ note.title }}</a>
+        <nuxt-link :to="prepareUrl(note.slug)"><span class="red-bg">{{ humanizeDate(note.date) }}</span> {{ note.title }}</nuxt-link>
       </li>
     </ul>
   </div>
@@ -21,6 +21,9 @@ export default {
   methods: {
     humanizeDate (date) {
       return moment(date).format('DD/MM/YYYY')
+    },
+    prepareUrl (url) {
+      return `/notes/${url}`
     }
   }
 }

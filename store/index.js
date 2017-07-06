@@ -2,6 +2,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import slugify from 'slugify'
 import fm from 'front-matter'
+import md from 'marked'
 import token from './../static/secrets/secret.json'
 
 const store = () => new Vuex.Store({
@@ -46,14 +47,10 @@ const store = () => new Vuex.Store({
           url: data[obj].download_url,
           slug: slugify(data[obj].name.slice(11, -3).toLowerCase()),
           year: str.attributes.date.slice(6, 10),
-          content: str.body || ''
-        }
-        let article = {
-          slug: entry.slug,
-          url: entry.url
+          content: str.body || '',
+          html: md(str.body)
         }
         commit('pushPost', entry)
-        commit('pushArticle', article)
       }
     }
   }
